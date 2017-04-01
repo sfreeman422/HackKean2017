@@ -58,11 +58,11 @@ else{
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
             <p>Let us know you more: </p>
-            <form method="post" enctype="multipart/form-data" action="saveinfo.php">
+            <form method="post" action="saveinfo.php" onSubmit="return true" >
                 <div class="col-sm-2 col-md-3">Height:(feet) <input type="text" name="userheight" id="userheight" ></div>
                 <div class="col-sm-2 col-md-3">(inches)<input type="text" name="userheight2" id="userheight2" ></div>
                 <div class="col-sm-2 col-md-3">Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs</div>
-                <div class="col-sm-2 col-md-3"><button type="submit" name="submit" class="btn btn-info" value="Save"></div>
+                <div class="col-sm-2 col-md-3"><button type="submit" name="submit" class="btn btn-info" value="Save">Save</div>
 
         </div>
         <!--main column ends-->
