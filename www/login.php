@@ -19,7 +19,7 @@ $password = MD5($_POST['password']);
 
 include('./classes/dbConnector.php');
 //check username and password
-$qry = "select id from user where username='$username' and pass='$password' limit 1";
+$qry = "select id from user where username='$username' and password='$password' limit 1";
 $check_query = mysqli_query($connect,$qry);
 if($result = mysqli_fetch_array($check_query)){
 	//log in successful
