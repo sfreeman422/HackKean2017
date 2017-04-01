@@ -48,9 +48,14 @@ app.post('/upload', function(req, res){
 		}
 	visionClient.detectText(__dirname+"/private/images/"+fileName, options, function(err,text,apiResponse){
 		if(err)throw err;
-		var stuff = text[0].desc;
+		//Holds the full returned value from Vision API
+		var receiptFull = text[0].desc;
+		var splitArr = [];
+		var idArr = [];
 		console.log(text[0].desc);
-		console.log(typeof stuff);
+		//Split the string out by spaces into the splitArr.
+		splitArr.push(receiptFull.split("\\s+"));
+		console.log(splitArr);
 		res.send(text[0].desc);
 	})		
 	});
