@@ -17,5 +17,6 @@ module.exports = function(image){
 	visionClient.detectText(image, options, function(err,text,apiResponse){
 		if(err)throw err;
 		console.log(text[0].desc);
+		return text[0].desc;
 	})
 }

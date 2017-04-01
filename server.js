@@ -4,10 +4,21 @@ var morgan = require('morgan');
 var path = require('path');
 var fs = require('fs');
 var multer = require('multer');
-var vision = require('./vision.js');
 //Instantiate express
 var app = express();
 var fileName; 
+var results; 
+
+//All the VisionAPI stuff
+const Vision = require('@google-cloud/vision');
+const projectId = 'supermarket-163315';
+const visionClient = Vision({
+		projectId: projectId
+	});
+const options = {
+		verbose: true
+	}
+
 //Create a storage variable that stores the destination and filename of an uploaded image. 
 var storage = multer.diskStorage({
 	destination: function(req, file, callback){
@@ -30,15 +41,23 @@ app.get('/', function(req, res){
 });
 
 app.post('/upload', function(req, res){
+	//Upload the file.
 	upload(req,res,function(err){
 		if(err){
 			return res.end("error uploading file. ");
 		}
-		console.log(fileName);
-		//Make a call to the vision API; 
-		vision(__dirname+"/private/images/"+fileName);
-		//res.end("File is uploaded");
+	visionClient.detectText(__dirname+"/private/images/"+fileName, options, function(err,text,apiResponse){
+		if(err)throw err;
+		var stuff = text[0].desc;
+		console.log(text[0].desc);
+		console.log(typeof stuff);
+		res.send(text[0].desc);
+	})		
 	});
+		//If the file is successfully uploaded, make the request to the visionAPI to parse the data. 
+		//vision(__dirname+"/private/images/"+fileName);
+		//This should send back the data that we gather from the receipt. 
+		//Need to implement a promise, use await or use async. 
 });
 
 //Listener
