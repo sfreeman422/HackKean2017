@@ -7,18 +7,6 @@
 <!--<div class="col-sm-3 col-md-2 sidebar">-->
     <ul class="nav nav-sidebar">
         <?php if($pagename == 'dashboard.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="dashboard.php">Overview</a></li>
-        <?php if($pagename == 'step.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="step.php">Step</a></li>
-        <?php if($pagename == 'sleep.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="sleep.php">Sleep Time</a></li>
-        <?php if($pagename == 'exercise.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="exercise.php">Exercise Time</a></li>
-        <?php if($pagename == 'cal.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="cal.php">Calories Burned</a></li>
-        <?php if($pagename == 'trackfood.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="trackfood.php">Track Food</a></li>
-        <?php if($pagename == 'friend.php') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="friend.php">Friend</a></li>
+            <a href="dashboard.php">Upload a receipt</a></li>
     </ul>
 </div>
