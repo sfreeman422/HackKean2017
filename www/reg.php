@@ -29,7 +29,7 @@ if(mysqli_fetch_array($check_query)){
 //write to mysql
 $password = MD5($password);
 $regdate = time();
-$sql = "INSERT INTO user(username,password,email,regdate)VALUES('$username','$password','$email',$regdate)";
+$sql = "INSERT INTO users(username,email,password,regdate)VALUES('$username','$password','$email',$regdate)";
 if(mysqli_query($connect,$sql)){
 	exit('Register successful <a href="login.html">Log in</a>');
 } else {
