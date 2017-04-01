@@ -24,7 +24,7 @@ $check_query = mysqli_query($connect,$qry);
 if($result = mysqli_fetch_array($check_query)){
 	//log in successful
 	$_SESSION['username'] = $username;
-	$_SESSION['id'] = $result['id'];
+	$_SESSION['userid'] = $result['id'];
     echo 'Login successful. Redirecting to index...';
     echo '<script language="javascript">window.location.href="index.php";</script>';
 } else {
