@@ -34,4 +34,7 @@ $update_entry_query = mysqli_query($connect, $update_entry);
 // echo $update_entry;
 echo $update_entry_query->error;
 
+echo "<p> Update Successful! </p>";
+echo '<script language="javascript">window.location.href="index.php";</script>' ;
+
 ?>
