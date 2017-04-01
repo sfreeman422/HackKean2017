@@ -10,6 +10,8 @@
             <a href="reg.html" class="btn btn-success btn-lg">Register</a>
             <a href="login.html" class="btn btn-lg btn-default">Log in</a>
             </p>
+            <p> </p>
+            <p> </p>
             </div>
         </p>
     </div>
