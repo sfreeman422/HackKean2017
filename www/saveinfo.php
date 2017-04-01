@@ -10,8 +10,8 @@ else{
 }
 
 $userheight=$_POST['userheight'];
-$userheight2=$_POST['$userheight2'];
-$userweight=$_POST['$userweight'];
+$userheight2=$_POST['userheight2'];
+$userweight=$_POST['userweight'];
 
 // echo $userid;
 // echo $username;
