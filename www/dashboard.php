@@ -46,8 +46,8 @@ else{
         <div class="col-sm-8 col-md-9 main">
             <p>Dashboard</p>
             <form method="post" enctype="multipart/form-data" action="/upload">
-                <input type="file" name="userPhoto">
-                <input type="submit" value="Upload Image" name="submit">
+                <div class="col-sm-2 col-md-3"><input type="file" name="userPhoto"></div>
+                <div class="col-sm-2 col-md-3"><input type="submit" class="btn btn-info" value="Upload Image" name="submit"></div>
 
         </div>
         <!--main column ends-->
