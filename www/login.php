@@ -19,12 +19,12 @@ $password = MD5($_POST['password']);
 
 include('./classes/dbConnector.php');
 //check username and password
-$qry = "select userid from user where username='$username' and pass='$password' limit 1";
+$qry = "select id from user where username='$username' and pass='$password' limit 1";
 $check_query = mysqli_query($connect,$qry);
 if($result = mysqli_fetch_array($check_query)){
 	//log in successful
 	$_SESSION['username'] = $username;
-	$_SESSION['userid'] = $result['userid'];
+	$_SESSION['id'] = $result['id'];
     echo 'Login successful. Redirecting to index...';
     echo '<script language="javascript">window.location.href="index.php";</script>';
 } else {

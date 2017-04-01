@@ -19,7 +19,7 @@ if(preg_match('/^([a-zA-Z0-9] [_|-|.]?)*[a-zA-Z0-9] @([a-zA-Z0-9] [_|-|.]?)*[a-z
 //mysql connect
 include('./classes/dbConnector.php');
 //duplicate user check
-$qry = "select userid from user where username='$username' limit 1";
+$qry = "select id from user where username='$username' limit 1";
 $check_query = mysqli_query($connect,$qry);
 
 if(mysqli_fetch_array($check_query)){
