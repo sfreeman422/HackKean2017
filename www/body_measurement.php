@@ -27,7 +27,7 @@ else{
    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
    <link href="./css/default.css" rel="stylesheet" type="text/css" />
 
-   <script type="text/javascript">
+   <!--<script type="text/javascript">
     function save_measurement() {
         var userheight = document.getElementById('userheight').value;
         var userheight2 = document.getElementById('userheight2').value;
@@ -38,7 +38,7 @@ else{
                 async: false
             }).responseText;
         }
-   </script>
+   </script>-->
 
 </head>
 <body>
@@ -58,11 +58,11 @@ else{
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
             <p>Let us know you more: </p>
-            <form method="post" enctype="multipart/form-data" action="">
-                <div class="col-sm-2 col-md-3">Height: <input type="text" name="userheight" id="userheight" ></div>
-                <div class="col-sm-2 col-md-3"><input type="text" name="userheight2" id="userheight2" ></div>
-                <div class="col-sm-2 col-md-3">Weight: <input type="text" name="userweight" id="userweight" >lbs</div>
-                <div class="col-sm-2 col-md-3"><input type="button" onclick = "save_measurement()" class="btn btn-info" value="Save" name="submit"></div>
+            <form method="post" enctype="multipart/form-data" action="saveinfo.php">
+                <div class="col-sm-2 col-md-3">Height:(feet) <input type="text" name="userheight" id="userheight" ></div>
+                <div class="col-sm-2 col-md-3">(inches)<input type="text" name="userheight2" id="userheight2" ></div>
+                <div class="col-sm-2 col-md-3">Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs</div>
+                <div class="col-sm-2 col-md-3"><button type="submit" name="submit" class="btn btn-info" value="Save"></div>
 
         </div>
         <!--main column ends-->
