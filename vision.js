@@ -1,19 +1,21 @@
-//import google cloud client library
-const Vision = require('@google-cloud/vision');
+module.exports = function(image){
+	//import google cloud client library
+	const Vision = require('@google-cloud/vision');
 
-//project
-const projectId = 'supermarket-163315';
+	//project
+	const projectId = 'supermarket-163315';
 
-//instantiates a client
-const visionClient = Vision({
-	projectId: projectId
-});
+	//instantiates a client
+	const visionClient = Vision({
+		projectId: projectId
+	});
 
-const fileToScan = './image.png' //THIS SHOULD PULL AN IMAGE
-const options = {
-	verbose: true
+	//const fileToScan = __dirname+'/private/images/userPhoto-1491073066739.png' //THIS SHOULD PULL AN IMAGE
+	const options = {
+		verbose: true
+	}
+	visionClient.detectText(image, options, function(err,text,apiResponse){
+		if(err)throw err;
+		console.log(text[0].desc);
+	})
 }
-visionClient.detectText(fileToScan, options, function(err,text,apiResponse){
-	console.log(text);
-	console.log(apiResponse);
-})

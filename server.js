@@ -4,15 +4,18 @@ var morgan = require('morgan');
 var path = require('path');
 var fs = require('fs');
 var multer = require('multer');
+var vision = require('./vision.js');
 //Instantiate express
 var app = express();
+var fileName; 
 //Create a storage variable that stores the destination and filename of an uploaded image. 
 var storage = multer.diskStorage({
 	destination: function(req, file, callback){
 		callback(null, './private/images');
 	},
 	filename: function(req, file, callback){
-		callback(null, file.fieldname+"-"+Date.now());
+		fileName = file.fieldname+"-"+Date.now()+".png";
+		callback(null, fileName);
 	}
 });
 //Tells the uploaded image to store in the proper directory as sa userphoto. 
@@ -31,7 +34,10 @@ app.post('/upload', function(req, res){
 		if(err){
 			return res.end("error uploading file. ");
 		}
-		res.end("File is uploaded");
+		console.log(fileName);
+		//Make a call to the vision API; 
+		vision(__dirname+"/private/images/"+fileName);
+		//res.end("File is uploaded");
 	});
 });
 
