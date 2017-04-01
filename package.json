@@ -1,0 +1,24 @@
+{
+  "name": "hackkean2017",
+  "version": "1.0.0",
+  "description": "A Budget Concious Supermarket Analytics Application",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sfreeman422/HackKean2017.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sfreeman422/HackKean2017/issues"
+  },
+  "homepage": "https://github.com/sfreeman422/HackKean2017#readme"
+}
