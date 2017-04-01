@@ -5,7 +5,6 @@
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My<span class="caret"></span></a>
             <ul class="dropdown-menu">
             <li><a href="my_profile.php">Profile</a></li>
-            <li><a href="my_friend.php">Friend</a></li>
             <li role="separator" class="divider"></li>';
         if($userid<10){
             echo '<li><a href="admin/index.php">Admin</a></li>
