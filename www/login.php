@@ -19,6 +19,8 @@ $password = MD5($_POST['password']);
 
 include('./classes/dbConnector.php');
 //check username and password
+echo $username;
+echo $password;
 $qry = "select id from users where username='$username' and password='$password' limit 1";
 $check_query = mysqli_query($connect,$qry);
 var_dump($check_query);
@@ -29,7 +31,6 @@ if($result = mysqli_fetch_array($check_query)){
     echo 'Login successful. Redirecting to index...';
     echo '<script language="javascript">window.location.href="index.php";</script>';
 } else {
-	var_dump ($check_query->error);
 	exit('Log in failed <a href="javascript:history.back(-1);">Retry</a>');
 }
 ?>
