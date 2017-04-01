@@ -2,11 +2,19 @@
 
 <?php
 session_start();
-if(isset($_SESSION['userid'])){
-    require_once('./classes/dbConnector.php');
-    $userid = $_SESSION['userid'];
-    $username = $_SESSION['username'];
+
+if(!isset($_SESSION['userid'])){
+	header("Location:login.html");
+	exit();
 }
+
+include('./classes/dbConnector.php');
+$userid = $_SESSION['userid'];
+$username = $_SESSION['username'];
+//require user info
+$user_info_qry = "select * from user where userid=$userid limit 1";
+$user_info_query = mysqli_query($connect,$user_info_qry);
+$row = mysqli_fetch_array($user_info_query);
 
 ?>
 
@@ -15,7 +23,7 @@ if(isset($_SESSION['userid'])){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>HackKean2017</title>
+  <title>HealthOn - Personal Health Monitor</title>
    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -33,10 +41,17 @@ if(isset($_SESSION['userid'])){
   <div class="row">
 
     <!--main colume begins-->
-    <?php 
-        if(!isset($_SESSION['userid'])) require('index_content.php'); 
-        else{ header("Location:dashboard.php"); exit(); }
+    <div class="col-md-10 col-md-offset-1 panel panel-default">
+        <h1>User Info:</h1>
+        <p>
+        <?php
+            echo 'User ID: ',$userid,'<br />';
+            echo 'User Name: ',$username,'<br />';
+            echo 'Email: ',$row['email'],'<br />';
+            echo 'Regdate: ',date("Y-m-d", $row['regdate']),'<br />';
         ?>
+        </p>
+    </div>
     <!--main colume ends-->
 
   </div><!-- //row -->

@@ -1,0 +1,62 @@
+<!-- // written by:Yuwei Jiang -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>User login</title>
+<!-- Bootstrap -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
+<link href="./css/usermanage.css" rel="stylesheet" type="text/css" />
+<!--Bootstrap ends-->
+<script language=JavaScript>
+
+function InputCheck(LoginForm)
+{
+  if (LoginForm.username.value == "")
+  {
+    alert("Please input a username");
+    LoginForm.username.focus();
+    return (false);
+  }
+  if (LoginForm.password.value == "")
+  {
+    alert("Please input a password");
+    LoginForm.password.focus();
+    return (false);
+  }
+}
+
+</script>
+</head>
+<body>
+<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-md-offset-3 panel panel-default">
+    <h1 class="margin-base-vertical">User login</h1>
+    <form name="LoginForm" method="post" action="login.php" onSubmit="return InputCheck(this)" class="margin-base-vertical">
+        <p class="input-group">
+            <span class="input-group-addon">Username: </span>
+            <input id="username" name="username" type="text" class="form-control input-lg"/>
+        <p/>
+        <p class="input-group">
+            <span class="input-group-addon">Password: </span>
+            <input id="password" name="password" type="password" class="form-control input-lg" />
+        <p/>
+        <p class="text-center">
+            <button type="submit" name="submit" value=" Log in " class="btn btn-lg btn-default" >Login</button>
+            <br /> Don't have an account? <a href="reg.html"> Sign up</a>.
+
+        </p>
+    </form>
+
+
+</div>
+<!--panel ends-->
+</div>
+<!--row ends-->
+</div>
+<!--container ends-->
+</body>
+</html>

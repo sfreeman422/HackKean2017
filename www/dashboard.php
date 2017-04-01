@@ -7,6 +7,9 @@ if(isset($_SESSION['userid'])){
     $userid = $_SESSION['userid'];
     $username = $_SESSION['username'];
 }
+else{
+    header("Location:index.php"); exit();
+}
 
 ?>
 
@@ -21,6 +24,9 @@ if(isset($_SESSION['userid'])){
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
    <link href="https://fonts.googleapis.com/css?family=Abel|Open+Sans:400,600" rel="stylesheet" />
    <link href="./css/default.css" rel="stylesheet" type="text/css" />
+
+   
+
 </head>
 <body>
 
@@ -28,19 +34,28 @@ if(isset($_SESSION['userid'])){
 <?php include './classes/topbar.php' ?>
 <!--topbar ends-->
 
-<!--main container begins-->
+
+<!--put your stuff here-->
 <div class="container-fluid">
-  <div class="row">
+    <div class="row">
+        <!--sidebar begins-->
+        <?php require('./classes/dashboard_sidebar.php') ?>
+        <!--sidebar ends-->
 
-    <!--main colume begins-->
-    <?php 
-        if(!isset($_SESSION['userid'])) require('index_content.php'); 
-        else{ header("Location:dashboard.php"); exit(); }
-        ?>
-    <!--main colume ends-->
+        <!--main column begins-->
+        <div class="col-sm-8 col-md-9 main">
+            <p>Dashboard</p>
 
-  </div><!-- //row -->
+
+        </div>
+        <!--main column ends-->
+
+    </div>
 </div>
-<!--main container ends-->
+
+
+
+
+
 </body>
 </html>
