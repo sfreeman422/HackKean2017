@@ -1,0 +1,46 @@
+/*written by:Yuwei Jiang*/
+
+html {
+    background: url(images/bg.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    padding-top: 65px;
+    font-size: 16px;
+    font-family: "Open Sans",serif;
+    background: transparent;
+}
+
+h1 {
+    font-family: "Abel", Arial, sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+}
+
+/* Override B3 .panel adding a subtly transparent background */
+.panel {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.margin-base-vertical {
+    margin: 40px 0;
+}
+
+.input-group-addon {
+    min-width:120px;
+    text-align:left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.img-responsive {
+    display: block; 
+    max-width: 100%; 
+    height: auto;
+}
