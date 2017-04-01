@@ -9,9 +9,9 @@ else{
     header("Location:index.php"); exit();
 }
 
-$userheight=$_GET['uh'];
-$userheight2=$_GET['uh2'];
-$userweight=$_GET['uw'];
+$userheight=$_POST['userheight'];
+$userheight2=$_POST['$userheight2'];
+$userweight=$_POST['$userweight'];
 
 // echo $userid;
 // echo $username;
