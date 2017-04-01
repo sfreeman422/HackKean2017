@@ -26,7 +26,7 @@ if(!mysqli_fetch_array($check_query)){
     $new_entry_query = mysqli_query($new_entry);
     echo "insert new entity. <br>";
     echo "$new_entry <br>";
-    var_dump( $new_entry_query->error);
+    var_dump( $new_entry_query);
 }
 
 $update_entry = "UPDATE user_measurement SET id=$userid, username = $username, userheight=$userheight, userheigh2=$userheight2, userweight=$userweight WHERE username = $username";
