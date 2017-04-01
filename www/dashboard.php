@@ -18,7 +18,7 @@ else{
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>HealthOn - Personal Health Monitor</title>
+  <title>HackKean2017</title>
    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
