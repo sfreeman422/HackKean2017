@@ -1,19 +1,11 @@
-//import google cloud client library
-const Vision = require('@google-cloud/vision');
+const express = require('express');
+const app = express();
+const morgan = require('morgan');
 
-//project
-const projectId = 'supermarket-163315';
+app.use(morgan("dev"));
 
-//instantiates a client
-const visionClient = Vision({
-	projectId: projectId
+app.get('/', function(req, res){
+	res.sendFile(__dirname+"/public/index.html");
 });
 
-const fileToScan = './image.png' //THIS SHOULD PULL AN IMAGE
-const options = {
-	verbose: true
-}
-visionClient.detectText(fileToScan, options, function(err,text,apiResponse){
-	console.log(text);
-	console.log(apiResponse);
-})
+app.listen(3000);
