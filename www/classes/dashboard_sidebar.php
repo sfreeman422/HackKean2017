@@ -8,5 +8,7 @@
     <ul class="nav nav-sidebar">
         <?php if($pagename == 'dashboard.php') echo '<li class="active">'; else echo '<li>'; ?>
             <a href="dashboard.php">Upload a receipt</a></li>
+        <?php if($pagename == 'body_measurement.php') echo '<li class="active">'; else echo '<li>'; ?>
+            <a href="body_measurement.php">Update Body Measurement</a></li>
     </ul>
 </div>
