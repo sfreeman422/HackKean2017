@@ -29,7 +29,7 @@ if($result = mysqli_fetch_array($check_query)){
     echo 'Login successful. Redirecting to index...';
     echo '<script language="javascript">window.location.href="index.php";</script>';
 } else {
-	echo $check_query->error;
+	var_dump ($check_query->error);
 	exit('Log in failed <a href="javascript:history.back(-1);">Retry</a>');
 }
 ?>
