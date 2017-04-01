@@ -44,7 +44,7 @@ else{
 
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
-            <p>If you havn't done so, please update your body measurement <a href src = './body_measurement.php'> here </a>. </p>
+            <p>If you havn't done so, please update your body measurement <a href"body_measurement.php"> here </a>. </p>
             <p>Upload your receipt</p>
             <form method="post" enctype="multipart/form-data" action="/upload">
                 <div class="col-sm-2 col-md-3"><input type="file" name="userPhoto"></div>
