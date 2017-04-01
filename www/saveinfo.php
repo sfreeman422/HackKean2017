@@ -22,7 +22,7 @@ $userweight=$_GET['uw'];
 $qry = "select id from user_measurement where username='$username' limit 1";
 $check_query = mysqli_query($connect,$qry);
 if(!mysqli_fetch_array($check_query)){
-	$new_entry = "INSERT INTO user_measurement (id, username, userheight, userheigh2, userweight) VALUES ($userid,'$username',$userheight,$userheight2,$userweight)";
+	$new_entry = "INSERT INTO user_measurement (id, username, userheight, userheigh2, userweight) VALUES ($userid,`$username`,$userheight,$userheight2,$userweight)";
     $new_entry_query = mysqli_query($new_entry);
     echo "insert new entity. <br>";
     var_dump( $new_entry_query->error);
