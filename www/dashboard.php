@@ -45,7 +45,9 @@ else{
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
             <p>Dashboard</p>
-
+            <form method="post" enctype="multipart/form-data" action="/upload">
+                <input type="file" name="userPhoto">
+                <input type="submit" value="Upload Image" name="submit">
 
         </div>
         <!--main column ends-->
