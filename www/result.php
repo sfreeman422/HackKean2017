@@ -23,9 +23,9 @@ while($row = mysqli_fetch_array($check_query)){
     array_push($foodname, $row['foodname']);
     array_push($foodcal, $row['foodcal']);
     array_push($foodprice, $row['price']);
-    echo $foodname; 
-    echo $foodcal;
-    echo $foodprice;
+    echo $row['foodname']; 
+    echo $row['foodcal'];
+    echo $row['price'];
 }
 ?>
 
