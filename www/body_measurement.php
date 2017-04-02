@@ -70,15 +70,12 @@ else{
                 </div>
                 <div class="col-sm-2 col-md-2">Height:(feet) <input type="text" name="userheight" id="userheight" ></div>
                 <div class="col-sm-2 col-md-2">(inches)<input type="text" name="userheight2" id="userheight2" ></div>
-                <br />
                 <div class="col-sm-2 col-md-2">
                     Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs
                 </div>
-                <br />
                 <div class="col-sm-2 col-md-2">
                     Age: <input type="text" name="age" id="age" >yo
                 </div>
-                <br />
                 <div class="col-sm-2 col-md-3">
                     <button type="submit" name="submit" class="btn btn-info" value="Save">Save
                 </div>
