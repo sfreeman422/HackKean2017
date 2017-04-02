@@ -59,6 +59,13 @@ else{
         <div class="col-sm-8 col-md-9 main">
             <p>Let us know you more: </p>
             <form method="post" action="saveinfo.php" >
+                <div class="col-sm-2 col-md-3">
+                <select name="gender">
+                    <option value="1">Male</option>
+                    <option value="2">Female</option>
+                    <option value="0">Other</option>
+                </select>
+                </div>
                 <div class="col-sm-2 col-md-3">Height:(feet) <input type="text" name="userheight" id="userheight" ></div>
                 <div class="col-sm-2 col-md-3">(inches)<input type="text" name="userheight2" id="userheight2" ></div>
                 <div class="col-sm-2 col-md-3">Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs</div>
