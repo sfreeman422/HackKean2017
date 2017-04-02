@@ -42,6 +42,9 @@ while($row = mysqli_fetch_array($check_query)){
     console.log(JSON.stringify(foodcal));
     console.log(JSON.stringify(foodprice));
     var calsum = 0
+    for(var i=0, len=foodcal.length; i<len; i++){
+    foodcal[i] = parseInt(foodcal[i], 10);
+}
 	for (var i = 0, calsum = 0; i < foodcal.length; calsum += foodcal[i++])
     	;    
 	console.log(calsum); // 6
