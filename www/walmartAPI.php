@@ -11,20 +11,20 @@ $itemid = '007874235205';
     <script type="text/javascript">
         var itemid = pad(<?php echo $itemid ?>, 12);
         $(document).ready(function () {
-            getupc(pad(078742352053, 10));
-            // $.ajax({
-            //     type:"GET", 
-            //     url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
-            //     success: function(data) {
-            //             // $("body").append(JSON.stringify(data["items"][0]["upc"]));
-            //             getupc(pad(data["items"][0]["upc"],10));
-            //             // $("body").append(JSON.stringify(data));
-            //         }, 
-            //     error: function(jqXHR, textStatus, errorThrown) {
-            //             alert(jqXHR.status);
-            //         },
-            // dataType: "jsonp"
-            // });
+            // getupc(pad(078742352053, 10));
+            $.ajax({
+                type:"GET", 
+                url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
+                success: function(data) {
+                        // $("body").append(JSON.stringify(data["items"][0]["upc"]));
+                        getupc(pad(data["items"][0]["upc"],10));
+                        // $("body").append(JSON.stringify(data));
+                    }, 
+                error: function(jqXHR, textStatus, errorThrown) {
+                        alert(jqXHR.status);
+                    },
+            dataType: "jsonp"
+            });
         });
         function pad(number,n) {
             var str = '' + number;
@@ -48,15 +48,15 @@ $itemid = '007874235205';
             dataType: "jsonp"
             });
         }
-        // function getjson() {
-        //     var itemid = "<?php echo $itemid ?>";
-        //     var jsonData = $.ajax({
-        //         url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy",
-        //         dataType:"json",
-        //         async: false
-        //     }).responseText;
+        function getjson() {
+            var itemid = "<?php echo $itemid ?>";
+            var jsonData = $.ajax({
+                url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy",
+                dataType:"json",
+                async: false
+            }).responseText;
             
-        // }
+        }
 
     </script>
 
