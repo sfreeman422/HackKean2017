@@ -49,7 +49,7 @@ $row = mysqli_fetch_array($user_info_query);
             echo 'User Name: ',$username,'<br />';
             echo 'Email: ',$row['email'],'<br />';
             echo 'Regdate: ', date("Y-m-d", $row['regdate']),'<br />';
-            echo '----Base Health Info----'
+            echo '----Base Health Info----';
             echo 'Height:';
             echo 'Weight:';
             echo 'Recomended Calorie Intake:';
