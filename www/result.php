@@ -64,13 +64,18 @@ function hideAllResponses() {
         }
     }
 }
-if(calsum < 2000){
-	hideAllResponses(response)
+if(calsum > 2000){
+document.write("Your calorie intake is over the recomeneded value!")
 }
+if(calsum < 2000){
+document.write("Your calorie intake is under the recomeneded value!")
+}
+if(calsum = 2000){
+document.write("Your calorie intake is the recomeneded value!")
+}
+document.write("You have spent:" + pricesum)
+document.write(foodname)
     </script>
-<div id="respond" class="alert alert-danger response">
-  <strong>Watch out!</strong> You are going over your Recomended Calorie Intake!
-</div>
 </head>
 <body>
 
