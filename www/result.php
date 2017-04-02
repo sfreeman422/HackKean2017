@@ -23,12 +23,12 @@ while($row = mysqli_fetch_array($check_query)){
     array_push($foodname, $row['foodname']);
     array_push($foodcal, $row['foodcal']);
     array_push($foodprice, $row['price']);
-    echo $row['foodname']; 
-    echo $row['foodcal'];
-    echo $row['price'];
+    // echo $row['foodname']; 
+    // echo $row['foodcal'];
+    // echo $row['price'];
 }
 
-var_dump($foodname);
+// var_dump($foodname);
 ?>
 
 <html>
