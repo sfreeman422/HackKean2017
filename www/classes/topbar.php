@@ -1,4 +1,4 @@
-<img src="images/logo_small3.png" />
+<img src="images/logo_small3.gif" />
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
 
   <div class="container-fluid">
