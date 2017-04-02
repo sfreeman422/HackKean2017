@@ -1,1 +1,29 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
+<body>
+<div>
+<h1 id="demo">The XMLHttpRequest Object</h1>
+  <input type="text" id="userInput">
+  <button id="request">
+</div>
+<script>
+var question1 = "How many grams of sugar are in "
+var question2 = "How many grams of fat are in "
+var question3 = "How many calories are in "
+//$ = jquery, when the id=request is clicked, run the function after the click.
+$('#request').click(function(){
+  var input = $('#userInput').val();
+  console.log(input);
+  $.ajax({
+      url: "http://api.wolframalpha.com/v1/result?appid=YGJTEJ-36E935EG6H&i="+input
+  }).done(function(data){
+    console.log(data);
+  });
+});
+</script>
+</body>
+</html>
