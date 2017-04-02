@@ -1,12 +1,18 @@
 <?php
 
 // $itemid = '007874235205';
-$number = $_GET['number'];
 $itemid = $_GET['itemid'];
-// echo $itemid;
-// $number = $_POST['number'];
-// $itemid = $_POST['itemid'];
-// echo $itemid;
+
+session_start();
+if(isset($_SESSION['userid'])){
+    require_once('./classes/dbConnector.php');
+    $userid = $_SESSION['userid'];
+    $username = $_SESSION['username'];
+}
+else{
+    header("Location:index.php"); exit();
+}
+
 ?>
 
 <html>
