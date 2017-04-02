@@ -1,5 +1,6 @@
-<!--container fluid-->
+<img src="images/logo_small3.png" />
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -25,7 +26,6 @@
         <!--navigation search ends-->
 
         <!--my menu begins-->
-        <img src="images/sml_title.png" />
         <?php require("mymenu.php"); ?>
         <!--my menu ends-->
 
