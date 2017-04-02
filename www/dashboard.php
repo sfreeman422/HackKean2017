@@ -18,7 +18,7 @@ else{
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>HackKean2017</title>
+  <title>NutraSnap</title>
    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -47,9 +47,8 @@ else{
             <p>If you havn't done so, please update your body measurement <a href="body_measurement.php"> here </a>. </p>
             <p>Upload your receipt</p>
             <form method="post" enctype="multipart/form-data" action="/upload">
-                <div class="col-sm-2 col-md-3"><input type="file" name="userPhoto"></div>
-                <div class="col-sm-2 col-md-3"><input type="submit" class="btn btn-info" value="Upload Image" name="submit"></div>
-
+                <div class="col-sm-2 col-md-3"><input class="btn btn-primary btn-primary" type="file" name="userPhoto"></div> </br>
+                <div class="col-sm-2 col-md-3"><input type="submit" class="btn btn-primary btn-primary" value="Upload Image" name="submit"></div>
         </div>
         <!--main column ends-->
 
