@@ -9,7 +9,7 @@ $itemid = '007874235205';
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
-        var itemid = <?php echo str_pad($itemid, 12, '0', STR_PAD_LEFT) ?>;
+        var itemid = pad(<?php echo $itemid ?>);
         $(document).ready(function () {
             $.ajax({
                 type:"GET", 
@@ -23,6 +23,13 @@ $itemid = '007874235205';
             dataType: "jsonp"
             });
         });
+        function pad(number) {
+            var str = '' + number;
+            while (str.length < 12) {
+                str = '0' + str;
+            }
+            return str;
+        }
         // function getjson() {
         //     var itemid = "<?php echo $itemid ?>";
         //     var jsonData = $.ajax({
