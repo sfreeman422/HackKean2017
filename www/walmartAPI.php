@@ -87,7 +87,7 @@ for($i = 0; $i < $number; $i++) {
                 itemcal = JSON.stringify(data["nf_calories"]);
                 savetomysql();
             });
-            savetomysql();
+            // savetomysql();
         }
         function savetomysql() {
             console.log('itemname'+itemname);
