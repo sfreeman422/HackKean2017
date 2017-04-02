@@ -13,8 +13,9 @@ else{
 $qry = "select * from foodtrack where username='$username' ";
 $check_query = mysqli_query($connect,$qry);
 
-if($result=mysqli_fetch_array($check_query)){
-	var_dump($result);
+if(!$result=mysqli_fetch_array($check_query)){
+    echo "Nothing found. ";
+	exit;
 }
-
+var_dump($result);
 ?>
