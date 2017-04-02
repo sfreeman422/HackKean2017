@@ -49,7 +49,7 @@ for($i = 0; $i < $number; $i++) {
                         // $("body").append(JSON.stringify(data));
                     }, 
                 error: function(jqXHR, textStatus, errorThrown) {
-                        alert(jqXHR.status);
+                        // alert(jqXHR.status);
                     },
             dataType: "jsonp"
             });
