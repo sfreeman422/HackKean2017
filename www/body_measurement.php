@@ -57,9 +57,10 @@ else{
 
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
+            <div class="col-md-6 col-md-offset-3 panel panel-default">
             <p>Let us know you more: </p>
             <form method="post" action="saveinfo.php" >
-                <div class="col-sm-2 col-md-3">
+                <div class="col-sm-1 col-md-3">
                 <select name="gender">
                     <option value="1">Male</option>
                     <option value="2">Female</option>
@@ -68,10 +69,16 @@ else{
                 </div>
                 <div class="col-sm-1 col-md-2">Height:(feet) <input type="text" name="userheight" id="userheight" ></div>
                 <div class="col-sm-1 col-md-2">(inches)<input type="text" name="userheight2" id="userheight2" ></div>
-                <div class="col-sm-1 col-md-2">Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs</div>
-                <div class="col-sm-1 col-md-2">Age: <input type="text" name="age" id="age" >yo</div>
-                <div class="col-sm-2 col-md-3"><button type="submit" name="submit" class="btn btn-info" value="Save">Save</div>
-
+                <!--<div class="col-sm-1 col-md-2">-->
+                    Weight:(lbs) <input type="text" name="userweight" id="userweight" >lbs
+                <!--</div>-->
+                <!--<div class="col-sm-1 col-md-2">-->
+                    Age: <input type="text" name="age" id="age" >yo
+                <!--</div>-->
+                <!--<div class="col-sm-2 col-md-3">-->
+                    <button type="submit" name="submit" class="btn btn-info" value="Save">Save
+                <!--</div>-->
+            </div>
         </div>
         <!--main column ends-->
 
