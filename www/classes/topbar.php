@@ -1,5 +1,5 @@
-<img src="images/logo_small3.gif" />
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+<img src="images/logo_small3.gif" width="50" height="50"/>
 
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
