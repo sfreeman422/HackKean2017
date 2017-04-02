@@ -1,5 +1,5 @@
-<!--container fluid-->
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
+
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -8,9 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <img src="sml_title.png" />
       </button>
-      <a class="navbar-brand" href="index.php">HackKean2017</a>
+      <img src="images/logo_small3.gif" width="50" height="50"/>
+      <a class="navbar-brand" href="index.php">NutraSnap</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->

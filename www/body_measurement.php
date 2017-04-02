@@ -61,7 +61,7 @@ else{
             <p>Let us know you more: </p>
             <form method="post" action="saveinfo.php" >
                 <div class="col-sm-1 col-md-3">
-                Gender: 
+                Gender:
                 <select name="gender">
                     <option value="1">Male</option>
                     <option value="2">Female</option>
