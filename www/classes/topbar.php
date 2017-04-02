@@ -1,4 +1,3 @@
-<img src="images/logo_small3.gif" />
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
 
   <div class="container-fluid">
@@ -10,6 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
+      <img src="images/logo_small3.gif" width="50" height="50"/>
       <a class="navbar-brand" href="index.php">NutraSnap</a>
     </div>
 
