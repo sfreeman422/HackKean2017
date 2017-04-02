@@ -75,7 +75,7 @@ document.write("Your calorie intake is the recomeneded value!")
 }
 document.write("You have spent:" + pricesum)
 foodname.toString();
-document.write(foodname)
+document.write(foodname.join('\r\n'));
     </script>
 </head>
 <body>
