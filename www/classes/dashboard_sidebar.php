@@ -12,7 +12,7 @@
             <a href="body_measurement.php">Update Body Measurement</a></li>
         <?php if($pagename == 'result.php') echo '<li class="active">'; else echo '<li>'; ?>
             <a href="result.php">Result</a></li>
-        <?php if($pagename == 'test.html') echo '<li class="active">'; else echo '<li>'; ?>
-            <a href="test.html">Wolfram</a></li>
+        <?php if($pagename == 'wolf.html') echo '<li class="active">'; else echo '<li>'; ?>
+            <a href="wolf.html">Wolfram</a></li>
     </ul>
 </div>
