@@ -64,7 +64,7 @@ function hideAllResponses() {
         }
     }
 }
-if(var calsum < 2000){
+if(calsum < 2000){
 	hideAllResponses(respond)
 }
     </script>
