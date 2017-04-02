@@ -20,7 +20,7 @@ $itemid = "007874235205";
                         alert(jqXHR.status);
                     },
             dataType: "jsonp"
-            });​​​​​​​​​​​​​​​
+            });
         });
         // function getjson() {
         //     var itemid = "<?php echo $itemid ?>";
