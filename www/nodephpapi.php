@@ -1,7 +1,7 @@
 <?php
 
-$number = $_POST['number'];
-$itemid = $_POST['itemid'];
+$number = $_GET['number'];
+$itemid = $_GET['itemid'];
 
 // session_start();
 // if(isset($_SESSION['userid'])){
