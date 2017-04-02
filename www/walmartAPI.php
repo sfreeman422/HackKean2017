@@ -10,6 +10,7 @@ $itemid = $_GET['itemid'];
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
         var itemid = pad(<?php echo $itemid ?>, 12);
+        console.log(itemid);
         $(document).ready(function () {
             // getupc(pad(078742352053, 10));
             $.ajax({
