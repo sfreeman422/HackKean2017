@@ -78,27 +78,30 @@ app.post('/upload', function(req, res){
 					newString += splitArr[i].charAt(j); 
 				}
 			}
-		onlyNumbersArr.push(parseInt(newString));
+		onlyNumbersArr.push(parseInt(newString, 10));
 		};
-		console.log("array with alpha removed: "+onlyNumbersArr);
-		
+		//This array holds the final productIds that we care about. 
+		var productIdsArr = [];
 		//Checks for the 12 Digit strings in the array. This doesnt really work because we have strings. If we parseInt, we lose leading zeroes which are required for the query. 
 		for(var i = 0; i < onlyNumbersArr.length; i++){
-			if(twelve.test(onlyNumbersArr[i]) == true){
-				console.log("12 digit number: "+onlyNumbersArr[i]);
+			if(onlyNumbersArr[i].toString().length == 10){
+				var numberString = onlyNumbersArr[i].toString(); 
+				var stringToPush = "00"+onlyNumbersArr[i].toString(); 
+				productIdsArr.push(stringToPush);
 			}
-			else if(eleven.test(onlyNumbersArr[i] == true)){
-				console.log("11 Digit Number: "+onlyNumbersArr[i]);
+			else if(onlyNumbersArr[i].toString().length == 11){
+				var numberString = onlyNumbersArr[i].toString();
+				var stringToPush = "0"+onlyNumbersArr[i].toString();  
+				productIdsArr.push(stringToPush); 
 			}
-			else if(ten.test(onlyNumbersArr[i] == true)){
-			 	console.log("10 Digit Number: "+onlyNumbersArr[i]);
-			}
-			else{
-				console.log("Nothing found");
-				console.log("length: "+onlyNumbersArr[i].length);
+			else if(onlyNumbersArr[i].toString().length == 12){
+				var numberString = onlyNumbersArr[i].toString();
+				var stringToPush = onlyNumbersArr[i].toString();  
+				productIdsArr.push(stringToPush); 
 			}
 		};
-		res.send(onlyNumbersArr);
+		console.log(productIdsArr);
+		res.send(productIdsArr);
 	})		
 	});
 });
