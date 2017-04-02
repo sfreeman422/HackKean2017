@@ -27,7 +27,7 @@ for($i = 0; $i < $number; $i++) {
     <script type="text/javascript">
         // console.log(parseInt(<?php echo json_encode($itemid) ?>));
         // var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
-        // var itemname;
+        var itemname;
         var itemcal = 160;
         var itemprice;
         var itemlist = <?php echo json_encode($itemlist) ?>;
@@ -105,7 +105,7 @@ for($i = 0; $i < $number; $i++) {
 
 <body>
 
-
+<a href = "./result.php" > Go back </a>
 
 </body>
 </html>
