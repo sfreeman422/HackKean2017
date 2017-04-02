@@ -22,7 +22,7 @@ $itemid = $_GET['itemid'];
         console.log(parseInt(<?php echo json_encode($itemid) ?>));
         var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
         var itemname;
-        var itemcal;
+        var itemcal = 160;
         console.log(itemid);
         $(document).ready(function () {
             // getupc(pad(078742352053, 10));
@@ -33,7 +33,7 @@ $itemid = $_GET['itemid'];
                         // $("body").append(JSON.stringify(data["items"][0]["upc"]));
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
-                        $("body").append(JSON.stringify(data["items"][0]["longDescription"]));
+                        itemname = JSON.stringify(data["items"][0]["name"]);
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
@@ -64,16 +64,19 @@ $itemid = $_GET['itemid'];
             //         },
             // dataType: "jsonp"
             // });
-            $.ajax({
-                url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
-                method: "get"
-            }).done(function(data){
-                //do stuff                
-                // $("body").append(JSON.stringify(data));
-                $("body").append(JSON.stringify(data["nf_calories"]));
-                itemcal = JSON.stringify(data["nf_calories"]);
-                savetomysql();
-            });
+
+
+            // $.ajax({
+            //     url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
+            //     method: "get"
+            // }).done(function(data){
+            //     //do stuff                
+            //     // $("body").append(JSON.stringify(data));
+            //     $("body").append(JSON.stringify(data["nf_calories"]));
+            //     itemcal = JSON.stringify(data["nf_calories"]);
+            //     savetomysql();
+            // });
+            savetomysql();
         }
         function savetomysql() {
             console.log('itemname'+itemname);
