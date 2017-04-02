@@ -65,7 +65,7 @@ function hideAllResponses() {
     }
 }
 if(calsum < 2000){
-	hideAllResponses(respond)
+	hideAllResponses(response)
 }
     </script>
 <div id="respond" class="alert alert-danger response">
