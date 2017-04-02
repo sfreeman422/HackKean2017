@@ -23,9 +23,9 @@ while($row = mysqli_fetch_array($check_query)){
     array_push($foodname, $row['foodname']);
     array_push($foodcal, $row['foodcal']);
     array_push($foodprice, $row['price']);
-    // echo $foodname; 
-    // echo $foodcal;
-    // echo $foodprice;
+    echo $foodname; 
+    echo $foodcal;
+    echo $foodprice;
 }
 ?>
 
@@ -43,38 +43,38 @@ while($row = mysqli_fetch_array($check_query)){
     console.log(JSON.stringify(foodprice));
     var calsum = 0
     for(var i=0, len=foodcal.length; i<len; i++){
-    foodcal[i] = parseInt(foodcal[i], 10);
-}
+        foodcal[i] = parseInt(foodcal[i], 10);
+    }
 	for (var i = 0, calsum = 0; i < foodcal.length; calsum += foodcal[i++])
     	;    
 	console.log(calsum); // 6
     var pricesum = 0
     for(var i=0, len=foodprice.length; i<len; i++){
-    foodprice[i] = parseInt(foodprice[i], 10);
-}
+        foodprice[i] = parseInt(foodprice[i], 10);
+    }
 	for (var i = 0, pricesum = 0; i < foodprice.length; pricesum += foodprice[i++])
     	;    
 	console.log(pricesum); // 6
-function hideAllResponses() {
-    var divs = document.getElementsByTagName('div');
-    for(var i = divs.length; i-- ;) {
-        var div = divs[i];
-        if(div.className === 'response') {
-            div.style.display = 'none';
+    function hideAllResponses() {
+        var divs = document.getElementsByTagName('div');
+        for(var i = divs.length; i-- ;) {
+            var div = divs[i];
+            if(div.className === 'response') {
+                div.style.display = 'none';
+            }
         }
     }
-}
-if(calsum > 2000){
-document.write("Your calorie intake is over the recomeneded value! <br />")
-}
-if(calsum < 2000){
-document.write("Your calorie intake is under the recomeneded value! <br />")
-}
-if(calsum == 2000){
-document.write("Your calorie intake is the recomeneded value! <br />")
-}
-document.write("You have spent:" + pricesum + "<br />")
-document.write(foodname.join(" <br /> "));
+    if(calsum > 2000){
+    document.write("Your calorie intake is over the recomeneded value! <br />")
+    }
+    if(calsum < 2000){
+    document.write("Your calorie intake is under the recomeneded value! <br />")
+    }
+    if(calsum == 2000){
+    document.write("Your calorie intake is the recomeneded value! <br />")
+    }
+    document.write("You have spent:" + pricesum + "<br />")
+    document.write(foodname.join(" <br /> "));
     </script>
 </head>
 <body>
