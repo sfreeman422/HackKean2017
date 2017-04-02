@@ -19,13 +19,13 @@ $foodprice = array();
 
 $row = array();
 while($row = mysqli_fetch_array($check_query)){
-    var_dump($row);
+    // var_dump($row);
     array_push($foodname, $row['foodname']);
     array_push($foodcal, $row['foodcal']);
     array_push($foodprice, $row['price']);
-    echo $foodname; 
-    echo $foodcal;
-    echo $foodprice;
+    // echo $foodname; 
+    // echo $foodcal;
+    // echo $foodprice;
 }
 ?>
 
@@ -35,7 +35,10 @@ while($row = mysqli_fetch_array($check_query)){
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
 
-
+    var foodname = <?php echo json_encode($foodname) ?>;
+    var foodcal = <?php echo json_encode($foodcal) ?>;
+    var foodprice = <?php echo json_encode($foodprice) ?>;
+    console.log(JSON.stringify(foodname));
     </script>
 
 </head>
