@@ -22,7 +22,7 @@ $gender=$_POST['gender'];
 // echo $userweight;
 
 //calculate the calories
-$cal = 4.53592 * $userweight + 15.875 * ( 5 * $userheight + $userheight2 ) - 5 * $age;
+$cal = 4.53592 * $userweight + 15.875 * ( 12 * $userheight + $userheight2 ) - 5 * $age;
 if($gender == 1) {
     $cal = $cal + 5;
 } else if($gender == 2) {
