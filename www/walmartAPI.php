@@ -1,10 +1,12 @@
 <?php
 
 // $itemid = '007874235205';
-// $itemid = $_GET['itemid'];
+$number = $_GET['number'];
+$itemid = $_GET['itemid'];
 // echo $itemid;
-$number = $_POST['number'];
-$itemid = $_POST['itemid'];
+// $number = $_POST['number'];
+// $itemid = $_POST['itemid'];
+// echo $itemid;
 ?>
 
 <html>
@@ -23,7 +25,6 @@ $itemid = $_POST['itemid'];
                         // $("body").append(JSON.stringify(data["items"][0]["upc"]));
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
-                        $("body").append(JSON.stringify(data["items"][0]["saleprice"]));
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
