@@ -1,10 +1,12 @@
 <?php
 
 // $itemid = '007874235205';
+$number = $_GET['number'];
 $itemid = $_GET['itemid'];
 // echo $itemid;
 // $number = $_POST['number'];
 // $itemid = $_POST['itemid'];
+// echo $itemid;
 ?>
 
 <html>
