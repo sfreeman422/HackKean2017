@@ -9,7 +9,7 @@ echo $itemid;
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
-        console.log(<?php echo $itemid ?>);
+        console.log(parseInt(<?php echo $itemid ?>, 10));
         var itemid = pad(<?php echo $itemid ?>, 12);
         console.log(itemid);
         $(document).ready(function () {
