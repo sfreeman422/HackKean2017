@@ -35,28 +35,27 @@ $itemid = '007874235205';
         }
         function getupc(upcnumber) {
             console.log(upcnumber);
+            // $.ajax({
+            //     type:"GET", 
+            //     url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
+            //     success: function(data) {
+            //             // console.log(JSON.stringify(data));
+            //             $("body").append(JSON.stringify(data));
+            //         }, 
+            //     error: function(jqXHR, textStatus, errorThrown) {
+            //             alert(jqXHR.status);
+            //         },
+            // dataType: "jsonp"
+            // });
             $.ajax({
-                type:"GET", 
                 url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
-                success: function(data) {
-                        // console.log(JSON.stringify(data));
-                        $("body").append(JSON.stringify(data));
-                    }, 
-                error: function(jqXHR, textStatus, errorThrown) {
-                        alert(jqXHR.status);
-                    },
-            dataType: "jsonp"
-            });
+                method: "get"
+            }).done(function(data){
+                //do stuff
+                $("body").append(JSON.stringify(data));
+            };
         }
-        function getjson() {
-            var itemid = "<?php echo $itemid ?>";
-            var jsonData = $.ajax({
-                url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy",
-                dataType:"json",
-                async: false
-            }).responseText;
-            
-        }
+
 
     </script>
 
