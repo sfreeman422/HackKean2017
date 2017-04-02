@@ -16,7 +16,7 @@ $itemid = $_GET['itemid'];
 
 $itemlist = array();
 for($i = 0; $i < $number; $i++) {
-    array_push($itemlist, substr($itemid,12 * i,12));
+    array_push($itemlist, substr($itemid,12 * $i,12));
 }
 
 ?>
