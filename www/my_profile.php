@@ -50,10 +50,10 @@ $row = mysqli_fetch_array($user_info_query);
             echo 'Email: ',$row['email'],'<br />';
             echo 'Regdate: ', date("Y-m-d", $row['regdate']),'<br />';
             echo '----Base Health Info----'
-            echo 'Height:'
-            echo 'Weight:'
-            echo 'Recomended Calorie Intake:'
-            echo '----Returned Info on Health'
+            echo 'Height:';
+            echo 'Weight:';
+            echo 'Recomended Calorie Intake:';
+            echo '----Returned Info on Health';
 
         
         ?>
