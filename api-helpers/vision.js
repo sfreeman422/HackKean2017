@@ -1,4 +1,4 @@
-module.exports = function(image){
+function detect (image, cb){
 	//import google cloud client library
 	const Vision = require('@google-cloud/vision');
 
@@ -17,6 +17,10 @@ module.exports = function(image){
 	visionClient.detectText(image, options, function(err,text,apiResponse){
 		if(err)throw err;
 		console.log(text[0].desc);
-		return text[0].desc;
-	})
+		cb(text[0].desc);
+	});
 }
+
+module.exports = detect; 
+
+//async.series to make api calls from node. google -> walmart -> nutronix -> return to the end user. wow
