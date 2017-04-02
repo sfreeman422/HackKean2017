@@ -1,6 +1,5 @@
-<!--container fluid-->
+<img src="images/logo_small3.png" />
 <nav class="navbar navbar-default navbar-fixed-top"  role="navigation">
-              <img src="images/sml_title.png" />
 
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
