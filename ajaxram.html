@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
+<head>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+</head>
 <body>
 
 <div>
 <h1 id="demo">The XMLHttpRequest Object</h1>
-<button type="button" onclick="loadDoc()">Change Content</button>
-<form id = "form" onsubmit="return false:">
-  <input  type="text" id="userInput">
-  <input  type="submit" onclick= "input()">
-</form>
+  <input type="text" id="userInput">
+  <button id="request">
 </div>
 
 <script>
@@ -16,24 +16,16 @@ var question1 = "How many grams of sugar are in "
 var question2 = "How many grams of fat are in "
 var question3 = "How many calories are in "
 
-function input() {
-  var input = document.getElementById("userInput")
+//$ = jquery, when the id=request is clicked, run the function after the click.
+$('#request').click(function(){
+  var input = $('#userInput').val();
   console.log(input);
-  loadDoc(input)
-}
-function loadDoc(input) {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML =
-      this.responseText;
-    }
-  };
-
-
-  xhttp.open("GET", "http://api.wolframalpha.com/v1/result?appid=YGJTEJ-36E935EG6H&i="+input", false);
-  xhttp.send();
-}
+  $.ajax({
+      url: "http://api.wolframalpha.com/v1/result?appid=YGJTEJ-36E935EG6H&i="+input
+  }).done(function(data){
+    console.log(data);
+  });
+});
 </script>
 
 </body>
