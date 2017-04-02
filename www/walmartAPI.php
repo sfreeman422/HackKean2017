@@ -1,10 +1,10 @@
 <?php
 
 // $itemid = '007874235205';
-// $itemid = $_GET['itemid'];
+$itemid = $_GET['itemid'];
 // echo $itemid;
-$number = $_POST['number'];
-$itemid = $_POST['itemid'];
+// $number = $_POST['number'];
+// $itemid = $_POST['itemid'];
 ?>
 
 <html>
