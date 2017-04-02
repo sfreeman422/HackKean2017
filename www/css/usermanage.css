@@ -1,17 +1,13 @@
 /* written by:Yuwei Jiang */
 html {
-    background: url(images/bg.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: rgba(180, 246, 180, 0.9);
+
 }
 
 body {
     padding-top: 20px;
     font-size: 16px;
     font-family: "Open Sans",serif;
-    background-color: rgba(180, 246, 180, 0.9);
 }
 
 h1 {
