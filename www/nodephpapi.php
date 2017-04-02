@@ -36,6 +36,7 @@ for($i = 0; $i < $number; $i++) {
             }).done(function(data){ 
                 // console.log(itemlist[i]+' done');
             });
+            console.log(itemlist[i]);
         }
     </script>
 
