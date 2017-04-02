@@ -21,6 +21,8 @@ else{
     <script type="text/javascript">
         console.log(parseInt(<?php echo json_encode($itemid) ?>));
         var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
+        var itemname;
+        var itemcal;
         console.log(itemid);
         $(document).ready(function () {
             // getupc(pad(078742352053, 10));
@@ -31,6 +33,7 @@ else{
                         // $("body").append(JSON.stringify(data["items"][0]["upc"]));
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
+                        itemname = JSON.stringify(data["items"][0]["name"]);
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
@@ -68,6 +71,16 @@ else{
                 //do stuff                
                 // $("body").append(JSON.stringify(data));
                 $("body").append(JSON.stringify(data["nf_calories"]));
+                itemcal = JSON.stringify(data["nf_calories"]);
+                savetomysql();
+            });
+        }
+        function savetomysql() {
+            console.log('itemname'+itemname);
+            console.log('itemcal+'itemcal);
+            $.ajax({
+                url: "./savetomysql.php?itemname="+itemname+"&itemcal="+itemcal, 
+                method: "get"
             });
         }
 
