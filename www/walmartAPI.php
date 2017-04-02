@@ -1,7 +1,7 @@
 <?php
 
 $itemid = '007874235205';
-// $itemid = $_GET['itemid'];
+$itemid = $_GET['itemid'];
 
 ?>
 
