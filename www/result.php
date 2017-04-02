@@ -55,9 +55,22 @@ while($row = mysqli_fetch_array($check_query)){
 	for (var i = 0, pricesum = 0; i < foodprice.length; pricesum += foodprice[i++])
     	;    
 	console.log(pricesum); // 6
-
+function hideAllResponses() {
+    var divs = document.getElementsByTagName('div');
+    for(var i = divs.length; i-- ;) {
+        var div = divs[i];
+        if(div.className === 'response') {
+            div.style.display = 'none';
+        }
+    }
+}
+if(var calsum > 200){
+	showresponddiv(respond)
+}
     </script>
-
+<div id="respond" class="alert alert-danger response" style="display:none;" >
+  <strong>Watch out!</strong> You are going over your Recomended Calorie Intake!
+</div>
 </head>
 <body>
 
