@@ -51,7 +51,7 @@ for($i = 0; $i < $number; $i++) {
                     },
             dataType: "jsonp"
             });
-        });
+        }
         function pad(number,n) {
             var str = '' + number;
             while (str.length < n) {
