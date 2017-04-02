@@ -17,7 +17,7 @@ $itemid = '007874235205';
                 success: function(data) {
                         // $("body").append(JSON.stringify(data["items"][0]["upc"]));
                         getupc(pad(data["items"][0]["upc"],10));
-                        $("body").append(JSON.stringify(data));
+                        // $("body").append(JSON.stringify(data));
                     }, 
                 error: function(jqXHR, textStatus, errorThrown) {
                         alert(jqXHR.status);
@@ -33,6 +33,7 @@ $itemid = '007874235205';
             return str;
         }
         function getupc(upcnumber) {
+            console.log(upcnumber);
             $.ajax({
                 type:"GET", 
                 url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
