@@ -33,7 +33,7 @@ for($i = 0; $i < $number; $i++) {
             $.ajax({
                 url: "./walmartAPI.php?itemname="+itemlist[i], 
                 method: "get"
-            }).donedone(function(data){ 
+            }).done(function(data){ 
                 console.log(itemlist[i]+' done');
             });
         }
