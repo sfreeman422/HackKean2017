@@ -1,8 +1,9 @@
 <?php
 
 // $itemid = '007874235205';
+// $itemid = $_GET['itemid'];
+$number = $_GET['number'];
 $itemid = $_GET['itemid'];
-
 // session_start();
 // if(isset($_SESSION['userid'])){
 //     require_once('./classes/dbConnector.php');
@@ -13,18 +14,26 @@ $itemid = $_GET['itemid'];
 //     header("Location:index.php"); exit();
 // }
 
+$itemlist = array();
+for($i = 0; $i < $number; $i++) {
+    array_push($itemlist, substr($itemid,12 * i,12));
+}
+
 ?>
 
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
-        console.log(parseInt(<?php echo json_encode($itemid) ?>));
-        var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
-        var itemname;
+        // console.log(parseInt(<?php echo json_encode($itemid) ?>));
+        // var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
+        // var itemname;
         var itemcal = 160;
-        console.log(itemid);
-        $(document).ready(function () {
+        var itemlist = <?php echo json_encode($itemlist) ?>;
+        for(i = 0; i < itemlist.length; i++) {
+            getwalmart(itemlist[i]);
+        }
+        function getwalmart(itemid) {
             // getupc(pad(078742352053, 10));
             $.ajax({
                 type:"GET", 
