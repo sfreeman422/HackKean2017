@@ -23,7 +23,7 @@ $row = mysqli_fetch_array($user_info_query);
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>HealthOn - Personal Health Monitor</title>
+  <title>NutraSnap</title>
    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
@@ -49,6 +49,13 @@ $row = mysqli_fetch_array($user_info_query);
             echo 'User Name: ',$username,'<br />';
             echo 'Email: ',$row['email'],'<br />';
             echo 'Regdate: ',date("Y-m-d", $row['regdate']),'<br />';
+            echo '----Base Health Info----'
+            echo 'Height:'
+            echo 'Weight:'
+            echo 'Recomended Calorie Intake:'
+            echo '----Returned Info on Health'
+
+        
         ?>
         </p>
     </div>
