@@ -77,7 +77,7 @@ $itemid = $_GET['itemid'];
         }
         function savetomysql() {
             console.log('itemname'+itemname);
-            console.log('itemcal+'itemcal);
+            console.log('itemcal'+itemcal);
             $.ajax({
                 url: "./savetomysql.php?itemname="+itemname+"&itemcal="+itemcal, 
                 method: "get"
