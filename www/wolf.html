@@ -19,11 +19,12 @@ $('#request').click(function(){
   var input = $('#userInput').val();
   console.log(input);
   $.ajax({
-      url: "http://api.wolframalpha.com/v1/result?appid=YGJTEJ-36E935EG6H&i="+input
-  }).done(function(data){
-    console.log(data);
-  });
-});
+    type:"GET", 
+    url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
+    done: function(data){
+      $("body").append(JSON.stringify(data));
+    }})}
+);
 </script>
 </body>
 </html>
