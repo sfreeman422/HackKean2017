@@ -34,7 +34,7 @@ for($i = 0; $i < $number; $i++) {
                 url: "./walmartAPI.php?itemname="+itemlist[i], 
                 method: "get"
             }).done(function(data){ 
-                console.log(itemlist[i]+' done');
+                // console.log(itemlist[i]+' done');
             });
         }
     </script>
