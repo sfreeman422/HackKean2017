@@ -12,7 +12,7 @@ else{
 
 $qry = "select * from foodtrack where username='$username' ";
 $check_query = mysqli_query($connect,$qry);
-
+var_dump($check_query);
 $foodname = array();
 $foodcal = array();
 $foodprice = array();
