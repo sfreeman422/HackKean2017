@@ -56,7 +56,7 @@ app.post('/upload', function(req, res){
 			for(var i = 0; i<final.length;i++){
 				stringToSend += final[i];
 			};
-			res.redirect("http://hackkean2017-ywjnpeter675499.codeanyapp.com/www/walmartAPI.php?number="+lengthNum+"&itemid="+stringToSend);
+			res.redirect("http://hackKean2017U-jiangyuweicn603876.codeanyapp.com/www/walmartAPI.php?number="+lengthNum+"&itemid="+stringToSend);
 			//00000239552000023598235980008998955
 		});
 
