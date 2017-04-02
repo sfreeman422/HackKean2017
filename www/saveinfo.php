@@ -12,6 +12,7 @@ else{
 $userheight=$_POST['userheight'];
 $userheight2=$_POST['userheight2'];
 $userweight=$_POST['userweight'];
+$age=$_POST['age'];
 $gender=$_POST['gender'];
 
 // echo $userid;
@@ -23,14 +24,14 @@ $gender=$_POST['gender'];
 $qry = "select id from user_measurement where username='$username' limit 1";
 $check_query = mysqli_query($connect,$qry);
 if(!mysqli_fetch_array($check_query)){
-	$new_entry = "INSERT INTO user_measurement (id, username, userheight, userheigh2, userweight, gender) VALUES ($userid,'$username',$userheight,$userheight2,$userweight, $gender)";
+	$new_entry = "INSERT INTO user_measurement (id, username, userheight, userheigh2, userweight, age, gender) VALUES ($userid,'$username',$userheight,$userheight2,$userweight, $age, $gender)";
     $new_entry_query = mysqli_query($connect, $new_entry);
     // echo "insert new entity. <br>";
     // echo "$new_entry <br>";
     // var_dump( $new_entry_query);
 }
 
-$update_entry = "UPDATE user_measurement SET id=$userid, username = '$username', userheight=$userheight, userheigh2=$userheight2, userweight=$userweight, gender=$gender WHERE username = '$username' ";
+$update_entry = "UPDATE user_measurement SET id=$userid, username = '$username', userheight=$userheight, userheigh2=$userheight2, userweight=$userweight, age=$age, gender=$gender WHERE username = '$username' ";
 $update_entry_query = mysqli_query($connect, $update_entry);
 // echo $update_entry;
 echo $update_entry_query->error;
