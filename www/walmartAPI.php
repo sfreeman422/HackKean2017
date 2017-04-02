@@ -9,6 +9,7 @@ $itemid = "007874235205";
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript">
+        var itemid = <?php echo $itemid ?>;
         $(document).ready(function () {
             $.ajax({
                 type:"GET", 
