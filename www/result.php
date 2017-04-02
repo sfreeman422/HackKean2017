@@ -74,8 +74,7 @@ if(calsum == 2000){
 document.write("Your calorie intake is the recomeneded value!")
 }
 document.write("You have spent:" + pricesum)
-foodname.toString();
-document.write(foodname.join('\r\n'));
+document.write(foodname.join('\n'));
     </script>
 </head>
 <body>
