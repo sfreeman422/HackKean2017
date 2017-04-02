@@ -48,6 +48,14 @@ while($row = mysqli_fetch_array($check_query)){
 	for (var i = 0, calsum = 0; i < foodcal.length; calsum += foodcal[i++])
     	;    
 	console.log(calsum); // 6
+    var pricesum = 0
+    for(var i=0, len=foodprice.length; i<len; i++){
+    foodprice[i] = parseInt(foodprice[i], 10);
+}
+	for (var i = 0, pricesum = 0; i < foodprice.length; pricesum += foodprice[i++])
+    	;    
+	console.log(pricesum); // 6
+
     </script>
 
 </head>
