@@ -10,5 +10,9 @@
             <a href="dashboard.php">Upload a receipt</a></li>
         <?php if($pagename == 'body_measurement.php') echo '<li class="active">'; else echo '<li>'; ?>
             <a href="body_measurement.php">Update Body Measurement</a></li>
+        <?php if($pagename == 'result.php') echo '<li class="active">'; else echo '<li>'; ?>
+            <a href="result.php">Result</a></li>
+        <?php if($pagename == 'test.html') echo '<li class="active">'; else echo '<li>'; ?>
+            <a href="test.html">Wolfram</a></li>
     </ul>
 </div>
