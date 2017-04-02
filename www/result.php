@@ -70,7 +70,7 @@ document.write("Your calorie intake is over the recomeneded value!")
 if(calsum < 2000){
 document.write("Your calorie intake is under the recomeneded value!")
 }
-if(calsum = 2000){
+if(calsum == 2000){
 document.write("Your calorie intake is the recomeneded value!")
 }
 document.write("You have spent:" + pricesum)
