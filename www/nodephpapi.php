@@ -29,7 +29,13 @@ for($i = 0; $i < $number; $i++) {
     <script type="text/javascript">
         var itemlist = <?php echo json_encode($itemlist) ?>;
         for(i = 0; i < itemlist.length; i++) {
-            console.log(itemlist[i]);
+            // console.log(itemlist[i]);
+            $.ajax({
+                url: "./walmartAPI.php?itemname="+itemlist[i], 
+                method: "get"
+            }).done(function(data){ 
+                console.log(itemlist[i]+' done');
+            });
         }
     </script>
 
