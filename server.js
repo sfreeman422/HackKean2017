@@ -46,18 +46,64 @@ app.post('/upload', function(req, res){
 		if(err){
 			return res.end("error uploading file. ");
 		}
+	//Makes the request to the vision api using our image. 
 	visionClient.detectText(__dirname+"/private/images/"+fileName, options, function(err,text,apiResponse){
 		if(err)throw err;
-		var stuff = text[0].desc;
+		//Holds the full returned value from Vision API
+		var receiptFull = text[0].desc;
+		console.log(typeof receiptFull);
+		var idArr = [];
 		console.log(text[0].desc);
-		console.log(typeof stuff);
-		res.send(text[0].desc);
+		//Split the string out by spaces into the splitArr.
+		var splitArr = receiptFull.split(" ");
+		//Regex to find all upper and lower case numbers. 
+		var alphabetical = new RegExp("^[A-z]+$");
+		//Regex to find all twelve digit numbers. This one relies on the strings being parsed as ints.  
+		var digits = new RegExp("^\d{12}$");
+		//Regex for dollars. 
+		var dollars = new RegExp("^\[0-9]+(.[0-9]+)$");
+		//Regex to find any twelve characters in the array.
+		var twelve = new RegExp("^\d{12}$");
+		var eleven = new RegExp("^\d{11}$");
+		var ten = new RegExp("^\d{10}$");
+		var onlyNumbersArr = [];
+		//Removes the Alphabetical Characters from the array. 
+		for(var i = 0; i < splitArr.length; i++){
+			var newString="";
+			for(var j = 0; j< splitArr[i].length; j++){
+				if(alphabetical.test(splitArr[i].charAt(j))== true){
+					newString += ""; 
+				}
+				else{
+					newString += splitArr[i].charAt(j); 
+				}
+			}
+		onlyNumbersArr.push(parseInt(newString, 10));
+		};
+		//This array holds the final productIds that we care about. 
+		var productIdsArr = [];
+		//Checks for the 12 Digit strings in the array. This doesnt really work because we have strings. If we parseInt, we lose leading zeroes which are required for the query. 
+		for(var i = 0; i < onlyNumbersArr.length; i++){
+			if(onlyNumbersArr[i].toString().length == 10){
+				var numberString = onlyNumbersArr[i].toString(); 
+				var stringToPush = "00"+onlyNumbersArr[i].toString(); 
+				productIdsArr.push(stringToPush);
+			}
+			else if(onlyNumbersArr[i].toString().length == 11){
+				var numberString = onlyNumbersArr[i].toString();
+				var stringToPush = "0"+onlyNumbersArr[i].toString();  
+				productIdsArr.push(stringToPush); 
+			}
+			else if(onlyNumbersArr[i].toString().length == 12){
+				var numberString = onlyNumbersArr[i].toString();
+				var stringToPush = onlyNumbersArr[i].toString();  
+				productIdsArr.push(stringToPush); 
+			}
+		};
+		console.log(productIdsArr);
+		res.send(productIdsArr);
 	})		
 	});
-		//If the file is successfully uploaded, make the request to the visionAPI to parse the data. 
-		//vision(__dirname+"/private/images/"+fileName);
-		//This should send back the data that we gather from the receipt. 
-		//Need to implement a promise, use await or use async. 
 });
 
 //Listener
