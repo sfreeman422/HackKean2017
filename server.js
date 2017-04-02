@@ -50,12 +50,19 @@ app.post('/upload', function(req, res){
 		}
 	//Makes the request to the vision api using our image. 
 	vision(__dirname+"/private/images/"+fileName, function(data){
-		//Sends back an array of relevant product ids to the client. 
-		res.send(generateRelevantNumbers(data));
+		generateRelevantNumbers(data, function(final){
+			var stringToSend = "";
+			var lengthNum = final.length; 
+			for(var i = 0; i<final.length;i++){
+				stringToSend += final[i];
+			};
+			res.redirect("http://hackkean2017-ywjnpeter675499.codeanyapp.com/www/walmartAPI.php?number="+lengthNum+"&itemid="+stringToSend);
+			//00000239552000023598235980008998955
+		});
 
 		//Makes a call to the walmart API
 		// walmart(generateRelevantNumbers(data), function(results){
-		// 	console.log(results);
+		// 	res.send(results);
 		// });
 	});
 	});
@@ -65,7 +72,7 @@ app.post('/upload', function(req, res){
 //That we are concerned with. This is a little janky in that it only really works if there are >10 digits present in the codes.
 //Anything under that will fail due to the fact that we do not have a way to re-add the missing zeroes that happen once we 
 //Turn the string into an int. 
-function generateRelevantNumbers(data){
+function generateRelevantNumbers(data, cb){
 	var receiptFull = data; 
 	var splitArr = receiptFull.split(" ");
 	var alphabetical = new RegExp("^[A-z]+$");
@@ -101,7 +108,7 @@ function generateRelevantNumbers(data){
 			productIdsArr.push(stringToPush); 
 		}
 	}
-	return(productIdsArr);
+	cb(productIdsArr);
 }
 
 //Listener

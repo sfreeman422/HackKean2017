@@ -2,21 +2,28 @@ function getWalmart(productIds, cb){
 	var request = require('request');
 	var itemInfo = [];
 	var queryString = "";
-	for(var i = 0; i < productIds.length; i++){
-		if(i!=productIds.length-1){
-			queryString += productIds[i]+",";
-		}
-		else{
-			queryString += productIds[i];
-		}
-	}
-	console.log(queryString);
-	request("http://api.walmartlabs.com/v1/items?ids="+queryString+"&apiKey=bt2hkmve2uxc8tmfzwn42kfy", function(error, response, body){
-		console.log('error:', error);
-		console.log('statusCode:', response &&response.statusCode);
-		console.log('body:', body);
-	})
-	//cb(itemInfo);
+for(var i = 0; i < productIds.length; i++){
+	request("http://api.walmartlabs.com/v1/search?apiKey=bt2hkmve2uxc8tmfzwn42kfy&query="+productIds[i], function(error, response, body){
+			console.log('error:', error);
+			console.log('statusCode:', response && response.statusCode);
+			console.log('body:', body);
+			var newBody = JSON.parse(body);
+			if(newBody.message == "Results not found!"){
+				console.log("Unable to find:"+newBody.query);
+			}
+			else{
+				var itemObject = {
+					query: newBody.query,
+					name: newBody.items[0].name,
+					price: newBody.items[0].msrp,
+					category: newBody.items[0].categoryPath
+				}
+				itemInfo.push(itemObject);
+			}
+		});
+}
+
+cb(itemInfo);
 };
 
 module.exports = getWalmart; 
