@@ -12,13 +12,13 @@ else{
 
 $qry = "select * from foodtrack where username='$username' ";
 $check_query = mysqli_query($connect,$qry);
-var_dump($check_query);
+// var_dump($check_query);
 $foodname = array();
 $foodcal = array();
 $foodprice = array();
 
 $row = array();
-while($row = mysql_fetch_array($check_query)){
+while($row = mysqli_fetch_array($check_query)){
     var_dump($row);
     array_push($foodname, $row['foodname']);
     array_push($foodcal, $row['foodcal']);
