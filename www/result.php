@@ -70,6 +70,7 @@ while($row = mysqli_fetch_array($check_query)){
     document.write("Your calorie intake is the recomeneded value! <br />")
     }
     document.write("You have spent:" + pricesum + "dollars <br />")
+    document.write("<a href = './dashboard.php' > Go back </a> ")
     </script>
 </head>
 <body>
