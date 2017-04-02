@@ -33,7 +33,7 @@ $itemid = $_GET['itemid'];
                         // $("body").append(JSON.stringify(data["items"][0]["upc"]));
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
-                        $itemname = JSON.stringify(data["items"][0]["name"]);
+                        itemname = JSON.stringify(data["items"][0]["name"]);
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
