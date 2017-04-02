@@ -53,7 +53,7 @@ $itemid = '007874235205';
             }).done(function(data){
                 //do stuff
                 $("body").append(JSON.stringify(data));
-            };
+            });
         }
 
 
