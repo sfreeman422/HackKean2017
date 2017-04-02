@@ -34,7 +34,7 @@ $itemid = '007874235205';
             return str;
         }
         function getupc(upcnumber) {
-            // console.log(upcnumber);
+            console.log(upcnumber);
             $.ajax({
                 type:"GET", 
                 url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
