@@ -65,15 +65,15 @@ function hideAllResponses() {
     }
 }
 if(calsum > 2000){
-document.write("Your calorie intake is over the recomeneded value!")
+document.write("Your calorie intake is over the recomeneded value! <br />")
 }
 if(calsum < 2000){
-document.write("Your calorie intake is under the recomeneded value!")
+document.write("Your calorie intake is under the recomeneded value! <br />")
 }
 if(calsum == 2000){
-document.write("Your calorie intake is the recomeneded value!")
+document.write("Your calorie intake is the recomeneded value! <br />")
 }
-document.write("You have spent:" + pricesum)
+document.write("You have spent:" + pricesum + "<br />")
 document.write(foodname.join(" <br /> "));
     </script>
 </head>
