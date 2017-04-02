@@ -16,7 +16,7 @@ $itemid = '007874235205';
                 url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
                 success: function(data) {
                         $("body").append(JSON.stringify(data["items"][0]["upc"]));
-                        getupc(pac(data["items"][0]["upc"],10));
+                        getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
                 error: function(jqXHR, textStatus, errorThrown) {
