@@ -57,7 +57,7 @@ else{
 
         <!--main column begins-->
         <div class="col-sm-8 col-md-9 main">
-            <div class="col-md-6 col-md-offset-3 panel panel-default">
+            <!--<div class="col-md-6 col-md-offset-3 panel panel-default">-->
             <p>Let us know you more: </p>
             <form method="post" action="saveinfo.php" >
                 <div class="col-sm-1 col-md-3">
@@ -79,7 +79,7 @@ else{
                 <div class="col-sm-2 col-md-3">
                     <button type="submit" name="submit" class="btn btn-info" value="Save">Save
                 </div>
-            </div>
+            <!--</div>-->
         </div>
         <!--main column ends-->
 
