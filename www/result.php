@@ -78,6 +78,6 @@ document.write(foodname.join(" <br /> "));
     </script>
 </head>
 <body>
-
+<script type="text/javascript" id="WolframAlphaScriptfd71bf9eaeb39fee6a213411d49e412e" src="//www.wolframalpha.com/widget/widget.jsp?id=fd71bf9eaeb39fee6a213411d49e412e"></script>
 </body>
 </html>
