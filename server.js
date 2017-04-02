@@ -46,7 +46,7 @@ app.post('/upload', function(req, res){
 	//Upload the file.
 	upload(req,res,function(err){
 		if(err){
-			return res.end("error uploading file. ");
+			return res.end("error uploading file. "+err);
 		}
 	//Makes the request to the vision api using our image. 
 	vision(__dirname+"/private/images/"+fileName, function(data){
