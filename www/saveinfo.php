@@ -21,6 +21,17 @@ $gender=$_POST['gender'];
 // echo $userheight2;
 // echo $userweight;
 
+//calculate the calories
+$cal = 4.53592 * $userweight + 2.46063125 * ( 5 * $userheight + $userheight2 ) - 5 * $age;
+if($gender == 1) {
+    $cal = $cal + 5;
+} else if($gender == 2) {
+    $cal = $cal - 161;
+} else {
+    $cal = 0;
+}
+echo $cal;
+
 $qry = "select id from user_measurement where username='$username' limit 1";
 $check_query = mysqli_query($connect,$qry);
 if(!mysqli_fetch_array($check_query)){
