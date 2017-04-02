@@ -23,4 +23,4 @@ function detect (image, cb){
 
 module.exports = detect; 
 
-//async.series to make api calls from node. google -> walmart -> nutronix -> return to the end user. 
+//async.series to make api calls from node. google -> walmart -> nutronix -> return to the end user. wow

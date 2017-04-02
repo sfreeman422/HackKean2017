@@ -4,7 +4,8 @@ var morgan = require('morgan');
 var path = require('path');
 var fs = require('fs');
 var multer = require('multer');
-var vision = require('./vision.js');
+var vision = require('./api-helpers/vision.js');
+var walmart = require('./api-helpers/walmart.js')
 //Instantiate express
 var app = express();
 var fileName; 
@@ -49,7 +50,13 @@ app.post('/upload', function(req, res){
 		}
 	//Makes the request to the vision api using our image. 
 	vision(__dirname+"/private/images/"+fileName, function(data){
+		//Sends back an array of relevant product ids to the client. 
 		res.send(generateRelevantNumbers(data));
+
+		//Makes a call to the walmart API
+		// walmart(generateRelevantNumbers(data), function(results){
+		// 	console.log(results);
+		// });
 	});
 	});
 });
