@@ -28,7 +28,7 @@ while($row = mysqli_fetch_array($check_query)){
     // echo $row['price'];
 }
 
-// var_dump($foodname);
+var_dump($foodname);
 ?>
 
 <html>
