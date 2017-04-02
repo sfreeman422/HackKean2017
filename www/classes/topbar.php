@@ -8,9 +8,9 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <img src="sml_title.png" />
+        <img src="images/sml_title.png" />
       </button>
-      <a class="navbar-brand" href="index.php">HackKean2017</a>
+      <a class="navbar-brand" href="index.php">NutraSnap</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
