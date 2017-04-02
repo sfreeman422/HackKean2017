@@ -64,11 +64,11 @@ function hideAllResponses() {
         }
     }
 }
-if(var calsum > 200){
-	showresponddiv(respond)
+if(var calsum < 2000){
+	hideAllResponses(respond)
 }
     </script>
-<div id="respond" class="alert alert-danger response" style="display:none;" >
+<div id="respond" class="alert alert-danger response">
   <strong>Watch out!</strong> You are going over your Recomended Calorie Intake!
 </div>
 </head>
