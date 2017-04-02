@@ -8,6 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <img src="sml_title.png" />
       </button>
       <a class="navbar-brand" href="index.php">HackKean2017</a>
     </div>
