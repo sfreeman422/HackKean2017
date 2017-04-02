@@ -8,7 +8,6 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-        <img src="images/sml_title.png" />
       </button>
       <a class="navbar-brand" href="index.php">NutraSnap</a>
     </div>
@@ -26,6 +25,7 @@
         <!--navigation search ends-->
 
         <!--my menu begins-->
+        <img src="images/sml_title.png" />
         <?php require("mymenu.php"); ?>
         <!--my menu ends-->
 
