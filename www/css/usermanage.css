@@ -11,7 +11,7 @@ body {
     padding-top: 20px;
     font-size: 16px;
     font-family: "Open Sans",serif;
-    background: transparent;
+    background-color: rgba(180, 246, 180, 0.9);
 }
 
 h1 {
@@ -22,7 +22,7 @@ h1 {
 
 /* Override B3 .panel adding a subtly transparent background */
 .panel {
-    background-color: rgba(180, 246, 180, 0.9);
+    background-color: rgba(92, 221, 92, 0.9);
 }
 
 .margin-base-vertical {
