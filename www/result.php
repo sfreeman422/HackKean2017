@@ -17,7 +17,7 @@ $foodname = array();
 $foodcal = array();
 $foodprice = array();
 
-$rows = array();
+$row = array();
 while($row = mysql_fetch_array($check_query)){
     var_dump($row);
     array_push($foodname, $row['foodname']);
