@@ -44,7 +44,7 @@ for($i = 0; $i < $number; $i++) {
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
                         itemname = JSON.stringify(data["items"][0]["name"]);
-                        itemprice = JSON.stringify(data["item"][0]["salePrice"]);
+                        itemprice = JSON.stringify(data["item"][0]["SalePrice"]);
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
