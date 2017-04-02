@@ -39,6 +39,8 @@ while($row = mysqli_fetch_array($check_query)){
     var foodcal = <?php echo json_encode($foodcal) ?>;
     var foodprice = <?php echo json_encode($foodprice) ?>;
     console.log(JSON.stringify(foodname));
+    console.log(JSON.stringify(foodcal));
+    console.log(JSON.stringify(foodprice));
     </script>
 
 </head>
