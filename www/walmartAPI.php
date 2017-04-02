@@ -29,6 +29,7 @@ for($i = 0; $i < $number; $i++) {
         // var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
         // var itemname;
         var itemcal = 160;
+        var itemprice;
         var itemlist = <?php echo json_encode($itemlist) ?>;
         for(i = 0; i < itemlist.length; i++) {
             getwalmart(itemlist[i]);
@@ -43,6 +44,7 @@ for($i = 0; $i < $number; $i++) {
                         console.log(JSON.stringify(data));
                         $("body").append(JSON.stringify(data["items"][0]["name"]));
                         itemname = JSON.stringify(data["items"][0]["name"]);
+                        itemprice = JSON.stringify(data["item"][0]["salePrice"]);
                         getupc(pad(data["items"][0]["upc"],10));
                         // $("body").append(JSON.stringify(data));
                     }, 
@@ -91,7 +93,7 @@ for($i = 0; $i < $number; $i++) {
             console.log('itemname'+itemname);
             console.log('itemcal'+itemcal);
             $.ajax({
-                url: "./savetomysql.php?itemname="+itemname+"&itemcal="+itemcal, 
+                url: "./savetomysql.php?itemname="+itemname+"&itemcal="+itemcal+"&itemprice="+itemprice, 
                 method: "get"
             });
         }

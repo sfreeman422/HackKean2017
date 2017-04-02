@@ -12,11 +12,12 @@ else{
 
 $itemname = $_GET['itemname'];
 $itemcal = $_GET['itemcal'];
+$itemprice = $_GET['itemprice'];
 
 echo $itemname;
 echo $itemcal;
 
-$new_entry = "INSERT INTO foodtrack (username, foodname, foodcal) VALUES ('$username','$itemname',$itemcal)";
+$new_entry = "INSERT INTO foodtrack (username, foodname, foodcal, price) VALUES ('$username','$itemname',$itemcal, $itemprice)";
 $check_query = mysqli_query($connect,$new_entry);
 
 // echo $update_entry;
