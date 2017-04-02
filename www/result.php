@@ -30,13 +30,12 @@ while($row = mysqli_fetch_array($check_query)){
 
 // var_dump($foodname);
 ?>
-<?php var_dump($foodname) ?>
 <html>
 
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>-->
     <script type="text/javascript">
-    
+    <?php var_dump($foodname) ?>
     var foodname = <?php echo json_encode($foodname) ?>;
     var foodcal = <?php echo json_encode($foodcal) ?>;
     var foodprice = <?php echo json_encode($foodprice) ?>;
