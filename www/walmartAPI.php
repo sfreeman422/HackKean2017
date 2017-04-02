@@ -27,7 +27,7 @@ for($i = 0; $i < $number; $i++) {
     <script type="text/javascript">
         // console.log(parseInt(<?php echo json_encode($itemid) ?>));
         // var itemid = pad(<?php echo json_encode($itemid) ?>, 12);
-        // var itemname;
+        var itemname;
         var itemcal = 160;
         var itemprice;
         var itemlist = <?php echo json_encode($itemlist) ?>;
@@ -49,7 +49,7 @@ for($i = 0; $i < $number; $i++) {
                         // $("body").append(JSON.stringify(data));
                     }, 
                 error: function(jqXHR, textStatus, errorThrown) {
-                        alert(jqXHR.status);
+                        // alert(jqXHR.status);
                     },
             dataType: "jsonp"
             });
@@ -77,17 +77,17 @@ for($i = 0; $i < $number; $i++) {
             // });
 
 
-            // $.ajax({
-            //     url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=27b8a449&appKey=2480417aee6635ea422d5bd2c05376b8", 
-            //     method: "get"
-            // }).done(function(data){
-            //     //do stuff                
-            //     // $("body").append(JSON.stringify(data));
-            //     $("body").append(JSON.stringify(data["nf_calories"]));
-            //     itemcal = JSON.stringify(data["nf_calories"]);
-            //     savetomysql();
-            // });
-            savetomysql();
+            $.ajax({
+                url: "https://api.nutritionix.com/v1_1/item?upc="+upcnumber+"&appId=cddeee00&appKey=21d48250b845b3486c64b06fa8e673ac", 
+                method: "get"
+            }).done(function(data){
+                //do stuff                
+                // $("body").append(JSON.stringify(data));
+                $("body").append(JSON.stringify(data["nf_calories"]));
+                itemcal = JSON.stringify(data["nf_calories"]);
+                savetomysql();
+            });
+            // savetomysql();
         }
         function savetomysql() {
             console.log('itemname'+itemname);
@@ -105,7 +105,7 @@ for($i = 0; $i < $number; $i++) {
 
 <body>
 
-
+<a href = "./result.php" > Go back </a>
 
 </body>
 </html>

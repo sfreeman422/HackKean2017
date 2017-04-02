@@ -46,9 +46,10 @@ else{
         <div class="col-sm-8 col-md-9 main">
             <p>If you havn't done so, please update your body measurement <a href="body_measurement.php"> here </a>. </p>
             <p>Upload your receipt</p>
-            <form method="post" enctype="multipart/form-data" action="localhost:2000/upload">
+            <!--<form method="post" enctype="multipart/form-data" action="localhost:2000/upload">
                 <div class="col-sm-2 col-md-3"><input type="file" name="userPhoto"></div>
-                <div class="col-sm-2 col-md-3"><input type="submit" class="btn btn-primary btn-primary" value="Upload Image" name="submit"></div>
+                <div class="col-sm-2 col-md-3"><input type="submit" class="btn btn-primary btn-primary" value="Upload Image" name="submit"></div>-->
+            <a href = "http://hackkean2017u-jiangyuweicn603876.codeanyapp.com:2000"> Upload your Receipt to scan here. </a>
         </div>
         <!--main column ends-->
 
