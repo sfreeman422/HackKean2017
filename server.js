@@ -54,6 +54,10 @@ app.post('/upload', function(req, res){
 	});
 });
 
+//Function that takes the results of the vision API and strips away irrelevant data, leaving us with only the product IDs
+//That we are concerned with. This is a little janky in that it only really works if there are >10 digits present in the codes.
+//Anything under that will fail due to the fact that we do not have a way to re-add the missing zeroes that happen once we 
+//Turn the string into an int. 
 function generateRelevantNumbers(data){
 	var receiptFull = data; 
 	var splitArr = receiptFull.split(" ");
