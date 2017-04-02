@@ -69,7 +69,7 @@ while($row = mysqli_fetch_array($check_query)){
     if(calsum == 2000){
     document.write("Your calorie intake is the recomeneded value! <br />")
     }
-    document.write("You have spent:" + pricesum + "<br />")
+    document.write("You have spent:" + pricesum + "dollars <br />")
     </script>
 </head>
 <body>
