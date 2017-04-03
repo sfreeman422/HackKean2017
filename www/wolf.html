@@ -20,9 +20,9 @@ $('#request').click(function(){
   console.log(input);
   $.ajax({
     type:"GET", 
-    url: "http://api.walmartlabs.com/v1/search?query="+itemid+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
+    url: "http://api.walmartlabs.com/v1/search?query="+userInput+"&format=json&apiKey=bt2hkmve2uxc8tmfzwn42kfy", 
     done: function(data){
-      $("body").append(JSON.stringify(data));
+      $("demo").append(JSON.stringify(data));
     }})}
 );
 </script>
